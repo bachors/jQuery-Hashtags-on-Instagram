@@ -1,7 +1,7 @@
 /******************************************************
 * #### jQuery Hashtags on Instagram v01 ####
 * Coded by Ican Bachors 2014.
-* http://ibacor.com/labs/jquery-my-instagram-gallery/
+* http://ibacor.com/labs/jhoi-jquery-hashtags-on-instagram/
 * Updates will be posted to this site.
 ******************************************************/
 
