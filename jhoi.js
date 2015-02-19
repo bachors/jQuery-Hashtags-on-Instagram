@@ -20,7 +20,12 @@ var bcr_instag = function(ins_tag,ins_token){
 		}).done(function (data) {
 			var html = '';
 			$.each(data.data, function(i, item) {
-				var title = data.data[i].caption.text + ' - ' + Date(data.data[i].created_time);
+				var title = '';
+				if(data.data[i].caption == null){
+					title += Date(data.data[i].created_time);
+				}else {
+					title += data.data[i].caption.text + ' - ' + Date(data.data[i].created_time);
+				}
 				html += '<div class="bcr_unit_ins bcr_ins_box">';
 				html += '<a href="' + data.data[i].images.standard_resolution.url.replace(/\\/, "") + '" class="ins_popup" rel="ins_gallery" title="' + title + '"><img src="' + data.data[i].images.thumbnail.url.replace(/\\/, "") + '" alt="" title="' + title + '"></a>';
 				html += '<a href="http://instagram.com/' + data.data[i].caption.from.username + '" target="_blank"><span style="float:left"><i class="fa fa-user"> ' + data.data[i].caption.from.username + '</i></span></a>';
